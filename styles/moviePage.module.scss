@@ -1,0 +1,41 @@
+.container {
+  background: #fff;
+  min-height: 100vh;
+  padding: 30px;
+  margin-top: 20px;
+  word-wrap: break-word;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  .imgWrapper {
+    margin-right: 20px;
+    width: 40%;
+    align-self: flex-start;
+  }
+  img {
+    width: 100%;
+  }
+  h2 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: rgba(26, 18, 244, 0.824);
+  }
+  span {
+    color: black;
+  }
+}
+
+.textInfo {
+  font-size: 23px;
+  margin-top: 15px;
+  color: #8f95a3;
+}
+
+.back {
+  display: block;
+  width: 70%;
+  margin: 30px auto 0;
+  font-size: 30px;
+}
