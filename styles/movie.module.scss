@@ -1,5 +1,5 @@
 .poster {
-  background-size: contain;
+  background-size: contain !important;
 }
 
 .notFound {
@@ -16,4 +16,10 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
+}
+
+@media (max-width: 576px) {
+  .notFound {
+    font-size: 20px;
+  }
 }

@@ -29,7 +29,7 @@ export const MovieList: FC<MovieListProps> = ({ bookmark }) => {
         <Box paddingTop={5}>
           <Grid container flexWrap={"wrap"} rowGap={2}>
             {bookmarkedMovies.map((item, i) => (
-              <Grid xs={3} item container key={i}>
+              <Grid xs={12} sm={6} md={4} lg={3} item container key={i}>
                 <MoveItem movieItem={item} />
               </Grid>
             ))}
@@ -53,7 +53,7 @@ export const MovieList: FC<MovieListProps> = ({ bookmark }) => {
       <Box paddingTop={5}>
         <Grid container flexWrap={"wrap"} rowGap={2}>
           {movieItems.map((item, i) => (
-            <Grid xs={3} item container key={i}>
+            <Grid xs={12} sm={6} md={4} lg={3} item container key={i}>
               <MoveItem movieItem={item} />
             </Grid>
           ))}
