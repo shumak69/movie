@@ -9,8 +9,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Home Page</title>
-        <meta name="description" content="Home page" />
+        <title>Movie Page</title>
+        <meta name="description" content="On this movie page, you can find your favorite films." />
+        <meta name="keywords" content="films, movie" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

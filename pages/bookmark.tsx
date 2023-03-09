@@ -10,8 +10,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Favorite Page</title>
-        <meta name="description" content="Favorite page" />
+        <title>Bookmarked movies</title>
+        <meta name="description" content="Your bookmarked movies" />
+        <meta name="keywords" content="films, bookmark, movie" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

@@ -4,7 +4,7 @@ export function parseFromLS(key: string) {
     try {
       return JSON.parse(data);
     } catch (error) {
-      throw new Error(error);
+      return [];
     }
   }
   return [];
