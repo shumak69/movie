@@ -1,5 +1,6 @@
 import { Action, configureStore, ThunkAction } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
+import bookmarkSlice from "./slices/bookmarkSlice";
 import movieSlice from "./slices/movieSlice";
 
 // create a slice
@@ -22,6 +23,7 @@ const store = configureStore({
   reducer: {
     icon: iconslice.reducer,
     movie: movieSlice,
+    bookmark: bookmarkSlice,
   },
 });
 

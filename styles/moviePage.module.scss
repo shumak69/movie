@@ -12,6 +12,7 @@
   .imgWrapper {
     margin-right: 20px;
     width: 40%;
+    min-width: 20%;
     align-self: flex-start;
   }
   img {
@@ -33,9 +34,29 @@
   color: #8f95a3;
 }
 
-.back {
+button.back {
   display: block;
   width: 70%;
   margin: 30px auto 0;
   font-size: 30px;
+}
+
+.errorWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  > div {
+    background-color: #fff;
+    text-align: center;
+    color: red;
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

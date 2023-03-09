@@ -8,7 +8,12 @@ export interface IMovie {
 
 export interface IfetchMovies {
   Search: IMovie[];
-  totalResult: string;
+  totalResults: string;
+}
+
+export interface IFetchQuery {
+  searchTitle: string;
+  page?: number;
 }
 
 interface IRating {

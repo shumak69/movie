@@ -1,19 +1,30 @@
-import { Button, Card, CardMedia, Container, Grid } from "@mui/material";
+import { Button, Container } from "@mui/material";
+import { Box } from "@mui/system";
 import axios from "axios";
 import { GetServerSideProps } from "next";
-import { FC, Fragment } from "react";
-import { IMovie, IMoviePage } from "../../types/movie";
-import styles from "../../styles/moviePage.module.scss";
 import { useRouter } from "next/router";
-import Image from "next/image";
-import { Box, height } from "@mui/system";
+import { FC, Fragment } from "react";
+import styles from "../../styles/moviePage.module.scss";
+import { IMoviePage } from "../../types/movie";
 interface MoviePageProps {
-  movie: IMoviePage;
+  movie: IMoviePage & { Error: string };
 }
 
 export const MoviePage: FC<MoviePageProps> = ({ movie }) => {
   const router = useRouter();
-
+  console.log(movie);
+  if (movie.Error) {
+    return (
+      <div className={styles.errorWrapper}>
+        <div>
+          <h1>{movie.Error}</h1>
+          <Button variant="contained" onClick={() => router.back()} className={styles.back}>
+            Back
+          </Button>
+        </div>
+      </div>
+    );
+  }
   return (
     <Container className={styles.container}>
       <Box gap={3} className={styles.wrapper}>
@@ -38,7 +49,7 @@ export const MoviePage: FC<MoviePageProps> = ({ movie }) => {
           <div className={styles.textInfo}>
             Ratings: <br />{" "}
             <span>
-              {movie.Ratings.map((rating, i) => (
+              {movie?.Ratings?.map((rating, i) => (
                 <Fragment key={i}>
                   <span>
                     <strong> Source:</strong> {rating.Source} <strong>Value:</strong> {rating.Value}
@@ -77,7 +88,7 @@ export default MoviePage;
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   let response = null;
-
+  let error = "";
   try {
     response = await axios.get<IMoviePage>("https://www.omdbapi.com/", {
       params: {
@@ -85,8 +96,8 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
         apikey: "59567eef",
       },
     });
-  } catch (error) {
-    console.error(error);
+  } catch (e) {
+    console.log("error");
   }
   return {
     props: {

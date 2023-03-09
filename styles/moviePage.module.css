@@ -1,0 +1,51 @@
+.container {
+  background: #fff;
+  min-height: 100vh;
+  padding: 30px;
+  margin-top: 20px;
+  word-wrap: break-word;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .imgWrapper {
+  margin-right: 20px;
+  width: 40%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.wrapper img {
+  width: 100%;
+}
+
+.wrapper h2 {
+  margin-top: 10px;
+  font-size: 20px;
+  color: rgba(26, 18, 244, 0.824);
+}
+
+.wrapper span {
+  color: black;
+}
+
+.textInfo {
+  font-size: 23px;
+  margin-top: 15px;
+  color: #8f95a3;
+}
+
+.back {
+  display: block;
+  width: 70%;
+  margin: 30px auto 0;
+  font-size: 30px;
+}
+/*# sourceMappingURL=moviePage.module.css.map */

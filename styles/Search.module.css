@@ -1,0 +1,16 @@
+.seachIcon {
+  position: absolute;
+  right: 3px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.search input {
+  padding-right: 20px;
+}
+
+.wrapper {
+  position: relative;
+}
+/*# sourceMappingURL=Search.module.css.map */
