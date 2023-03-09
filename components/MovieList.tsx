@@ -5,7 +5,7 @@ import { FC, useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import styles from "../styles/movie.module.scss";
 import MoveItem from "./MovieItem";
-import { parseFromLS } from "@/utils";
+import { parseFromLS } from "../utils";
 
 interface MovieListProps {
   bookmark?: boolean;

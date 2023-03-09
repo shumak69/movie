@@ -8,6 +8,7 @@ import { fetchUserByPagination, fetchUserBySearch, setLoading } from "../store/s
 import { useDebounce } from "../hooks/useDebounce";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import { useRouter } from "next/router";
+
 export default function SearchBar() {
   const router = useRouter();
   const [searchValue, setSearchValue] = useState("");

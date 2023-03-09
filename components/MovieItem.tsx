@@ -5,7 +5,7 @@ import styles from "../styles/movie.module.scss";
 import { useRouter } from "next/router";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
-import { useAppDispatch, useAppSelector } from "@/store/hooks";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { initialMovies } from "../store/slices/bookmarkSlice";
 interface TrackItemProps {
   movieItem: IMovie;
