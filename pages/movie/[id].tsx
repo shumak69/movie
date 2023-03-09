@@ -79,7 +79,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   let response = null;
 
   try {
-    response = await axios.get<IMoviePage>("http://www.omdbapi.com/", {
+    response = await axios.get<IMoviePage>("https://www.omdbapi.com/", {
       params: {
         i: params?.id,
         apikey: "59567eef",
