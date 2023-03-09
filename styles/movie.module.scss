@@ -13,9 +13,9 @@
 }
 
 .bookmark {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+  position: absolute !important;
+  bottom: 10px !important;
+  right: 10px !important;
 }
 
 @media (max-width: 576px) {

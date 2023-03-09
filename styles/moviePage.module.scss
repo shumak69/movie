@@ -63,8 +63,8 @@ button.back {
 
 @media (max-width: 1200px) {
   .container {
-    margin: 15px;
-    width: fit-content;
+    margin: 15px !important;
+    width: fit-content !important;
   }
 }
 @media (max-width: 992px) {
@@ -81,8 +81,8 @@ button.back {
 }
 @media (max-width: 576px) {
   .container {
-    padding: 8px;
-    padding-top: 15px;
+    padding: 8px !important;
+    padding-top: 15px !important;
   }
   button.back {
     font-size: 15px;
