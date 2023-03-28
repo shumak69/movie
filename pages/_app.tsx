@@ -1,7 +1,8 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { Provider } from "react-redux";
-import store from "../store/index";
+import store, { persistor } from "../store/index";
+import { PersistGate } from "redux-persist/integration/react";
 export function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
@@ -9,7 +10,9 @@ export function App({ Component, pageProps }: AppProps) {
 function MyApp({ Component, pageProps }: any) {
   return (
     <Provider store={store}>
-      <Component {...pageProps} />
+      <PersistGate persistor={persistor} loading={null}>
+        <Component {...pageProps} />
+      </PersistGate>
     </Provider>
   );
 }

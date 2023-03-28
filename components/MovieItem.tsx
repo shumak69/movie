@@ -19,13 +19,8 @@ export const TrackItem: FC<TrackItemProps> = ({ movieItem }) => {
     e.stopPropagation();
     if (bookmarkedMovies.findIndex((item) => item.imdbID === movieItem.imdbID) !== -1) {
       dispatch(initialMovies(bookmarkedMovies.filter((item) => item.imdbID !== movieItem.imdbID)));
-      localStorage.setItem(
-        "bookmark",
-        JSON.stringify(bookmarkedMovies.filter((item) => item.imdbID !== movieItem.imdbID))
-      );
     } else {
       dispatch(initialMovies([...bookmarkedMovies, movieItem]));
-      localStorage.setItem("bookmark", JSON.stringify([...bookmarkedMovies, movieItem]));
     }
   };
 

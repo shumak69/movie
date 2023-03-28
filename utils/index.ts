@@ -8,5 +8,4 @@ export function parseFromLS(key: string) {
     }
   }
   return [];
-  // throw Error("Error occured in localStorage");
 }

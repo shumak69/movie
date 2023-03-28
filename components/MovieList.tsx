@@ -1,11 +1,9 @@
-import { initialMovies } from "../store/slices/bookmarkSlice";
 import { Grid } from "@mui/material";
 import { Box } from "@mui/system";
-import { FC, useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { FC } from "react";
+import { useAppSelector } from "../store/hooks";
 import styles from "../styles/movie.module.scss";
 import MoveItem from "./MovieItem";
-import { parseFromLS } from "../utils";
 
 interface MovieListProps {
   bookmark?: boolean;
@@ -14,12 +12,6 @@ interface MovieListProps {
 export const MovieList: FC<MovieListProps> = ({ bookmark }) => {
   const { movieItems, error, loading } = useAppSelector((state) => state.movie);
   const { bookmarkedMovies } = useAppSelector((state) => state.bookmark);
-  const dispatch = useAppDispatch();
-  useEffect(() => {
-    const moviesFromLS = parseFromLS("bookmark");
-    dispatch(initialMovies(moviesFromLS));
-  }, []);
-  console.log(bookmarkedMovies);
   if (bookmark && !bookmarkedMovies.length) {
     return <h1 className={styles.notFound}>You haven&apos;t added any bookmarks yet.</h1>;
   }
